@@ -1,4 +1,7 @@
-# And now, we teach our game controller to recognize 'three-in-row' state. 
+# Now, a very important step, teach computer to play tic-tac-toe.
+# We create a function for randomly choosing a blank cell.
+
+from random import randrange
 
 indexesList = map( str, range(9) )
 board = [" "] * 9
@@ -45,6 +48,12 @@ def testBoard():
             return True
     return False
 
+def computersMove():
+    index = 4
+    while board[index] != " ":
+        index = randrange(9)
+    return index
+    
 printBoard( indexesList, "Cell indexes:" )
 while True:
     index = raw_input( "Enter a cell index... " )
@@ -65,5 +74,14 @@ while True:
             board[index] = "x"
             if testBoard():
                 printBoard( board, "\nYou win :)" )
+                break
+            elif " " in board:
+                index = computersMove()
+                board[index] = "o"
+                if testBoard():
+                    printBoard( board, "\nYou lose :(" )
+                    break
+            else:
+                printBoard( board, "\nDrawn game!" )
                 break
     printBoard( board, "\nGame board:" )

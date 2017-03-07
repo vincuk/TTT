@@ -2,7 +2,6 @@
 # But in the beginning of while loop nested for loops still looks ugly.
 
 board = [" "] * 9
-
 horizontalLine = "-" * 11
 separator = " | "
 

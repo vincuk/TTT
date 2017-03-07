@@ -1,10 +1,12 @@
 # Let's create a separate function for representation of the game board.
 # Now, the main part of the script looks more readable.
 
+indexesList = map( str, range(9) )
+board = [" "] * 9
+
 def printBoard( board, caption ):
     horizontalLine = "-" * 11
     separator = " | "
-    
     print ( caption )
     for rowIndex in range(3):
         rowString = " "
@@ -16,18 +18,15 @@ def printBoard( board, caption ):
         if rowIndex < 2:
             print( horizontalLine )
 
-printBoard( map( str, range(9) ), "Cell indexes:" )
-
-board = [" "] * 9
-
+printBoard( indexesList, "Cell indexes:" )
 while True:
     index = raw_input( "Enter a cell index... " )
     if index == "q":
         break
     elif index == "i":
-        printBoard( map( str, range(9) ), "\nCell indexes:" )
+        printBoard( indexesList, "\nCell indexes:" )
         continue
-    elif index not in map( str, range(9) ):
+    elif index not in indexesList:
         print( "Wrong index!\nUse 'i' for hint or 'q' to exit..." )
         continue
     else:
