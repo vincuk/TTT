@@ -1,4 +1,5 @@
-# While loop with the break
+# In this example, we repeat large part of our script using while loop.
+# To exit the loop we use break command.
 
 horizontalLine = "-----------\n"
 separator = " | "

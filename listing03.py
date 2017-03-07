@@ -1,4 +1,5 @@
-# Model of the game board
+# Third example: let's model of the game board!
+# We created nine variables: one for each cell.
 
 horizontalLine = "-----------\n"
 separator = " | "

@@ -1,4 +1,4 @@
-# Print the game board (using for loop)
+# Let's return to the third example and print the game board using for loop.
 
 horizontalLine = "-----------"
 separator = " | "

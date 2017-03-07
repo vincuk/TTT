@@ -1,4 +1,5 @@
-# Print the grid using variables
+# Second example: print the grid using variables.
+# String variables allow us to avoid repeating. Or, at least, we tried.
 
 verticalLines = "   |   |"
 horizontalLine = "-----------\n"

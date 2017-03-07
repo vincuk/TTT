@@ -1,4 +1,7 @@
-# Model of the game board (using list)
+# Is it possible to avoid creation of nine variables 
+#   with different names in our model?
+# Yes, of course! And in this example, we create one list variable
+#   for our model.
 
 board = [" "] * 9
 #board = map( str, range(9) )

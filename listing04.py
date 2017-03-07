@@ -1,4 +1,6 @@
-# User input and branches (brute force)
+# In this example, we try to control our model.
+# We change the cell according to the user input. Unfortunately, 
+#   it is such a brute force approach.
 
 horizontalLine = "-----------\n"
 separator = " | "
