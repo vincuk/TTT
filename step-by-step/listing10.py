@@ -1,4 +1,4 @@
-# Let's create a separate function for representation of the game board.
+# And now, we teach our game controller to recognize 'three-in-row' state. 
 # Now, the main part of the script looks more readable.
 
 def printBoard( board, caption ):
@@ -16,9 +16,37 @@ def printBoard( board, caption ):
         if rowIndex < 2:
             print( horizontalLine )
 
-printBoard( map( str, range(9) ), "Cell indexes:" )
-
 board = [" "] * 9
+
+def testRow(rowIdx):
+    if board[0 + 3*rowIdx] == board[1 + 3*rowIdx] == board[2 + 3*rowIdx] != " ":
+        return True
+    else:
+        return False
+        
+def testColumn(colIdx):
+    if board[0 + colIdx] == board[3 + colIdx] == board[6 + colIdx] != " ":
+        return True
+    else:
+        return False
+        
+def testDiagonals():
+    if board[0] == board[4] == board[8] != " ":
+        return True
+    elif board[2] == board[4] == board[6] != " ":
+        return True
+    else:
+        return False
+        
+def testBoard():
+    if testDiagonals():
+        return True
+    for index in range(3):
+        if testRow(index) or testColumn(index):
+            return True
+    return False
+
+printBoard( map( str, range(9) ), "Cell indexes:" )
 
 while True:
     index = raw_input( "Enter a cell index... " )
@@ -37,4 +65,7 @@ while True:
             continue
         else:
             board[index] = "x"
+            if testBoard():
+                printBoard( board, "\nYou win :)" )
+                break
     printBoard( board, "\nGame board:" )

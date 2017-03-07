@@ -14,9 +14,7 @@ cell6 = "6"
 cell7 = "7"
 cell8 = "8"
 
-index = "0"
-
-while index != "q":
+while True:
     firstRow = " " + cell0 + separator + cell1 + separator + cell2 + "\n"
     secondRow = " " + cell3 + separator + cell4 + separator + cell5 + "\n"
     thirdRow = " " + cell6 + separator + cell7 + separator + cell8

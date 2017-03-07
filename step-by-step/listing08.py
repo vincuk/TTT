@@ -6,9 +6,7 @@ board = [" "] * 9
 horizontalLine = "-" * 11
 separator = " | "
 
-index = "0"
-
-while index != "q":
+while True:
     for rowIndex in range(3):
         rowString = " "
         for columnIndex in range(3):
