@@ -4,7 +4,7 @@
 #   for our model.
 
 board = [" "] * 9
-#board = map( str, range(9) )
+board = list( map( str, range(9) ) )
 
 horizontalLine = "-" * 11
 separator = " | "

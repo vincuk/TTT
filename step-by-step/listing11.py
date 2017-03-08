@@ -3,7 +3,7 @@
 
 from random import randrange
 
-indexesList = map( str, range(9) )
+indexesList = list( map( str, range(9) ) )
 board = [" "] * 9
 
 def printBoard( board, caption ):
@@ -48,7 +48,7 @@ def testBoard():
             return True
     return False
 
-def computersMove():
+def computerMove():
     index = 4
     while board[index] != " ":
         index = randrange(9)
@@ -73,13 +73,13 @@ while True:
         else:
             board[index] = "x"
             if testBoard():
-                printBoard( board, "\nYou win :)" )
+                printBoard( board, "\nYou won :)" )
                 break
             elif " " in board:
-                index = computersMove()
+                index = computerMove()
                 board[index] = "o"
                 if testBoard():
-                    printBoard( board, "\nYou lose :(" )
+                    printBoard( board, "\nYou lost :(" )
                     break
             else:
                 printBoard( board, "\nDrawn game!" )

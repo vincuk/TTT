@@ -1,7 +1,7 @@
 # Let's create a separate function for representation of the game board.
 # Now, the main part of the script looks more readable.
 
-indexesList = map( str, range(9) )
+indexesList = list( map( str, range(9) ) )
 board = [" "] * 9
 
 def printBoard( board, caption ):

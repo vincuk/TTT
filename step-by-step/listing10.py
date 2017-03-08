@@ -1,6 +1,6 @@
 # And now, we teach our game controller to recognize 'three-in-row' state. 
 
-indexesList = map( str, range(9) )
+indexesList = list( map( str, range(9) ) )
 board = [" "] * 9
 
 def printBoard( board, caption ):
@@ -64,6 +64,6 @@ while True:
         else:
             board[index] = "x"
             if testBoard():
-                printBoard( board, "\nYou win :)" )
+                printBoard( board, "\nYou won :)" )
                 break
     printBoard( board, "\nGame board:" )
